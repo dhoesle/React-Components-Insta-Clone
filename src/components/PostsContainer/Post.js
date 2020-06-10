@@ -12,28 +12,28 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const { postData } = props
+  console.log("postData", postData)
 
   const [likes, setlikes] = useState(props)
-  console.log(likes.postData.username)
   return (
     <div className="post-border">
       <PostHeader
-        username={likes.postData.username}
+        username={postData.username}
         thumbnailUrl={
-          likes.postData.thumbnailUrl
+          postData.thumbnailUrl
         }
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={likes.postData.imageUrl}
+          src={postData.imageUrl}
         />
       </div>
       <LikeSection />
       <CommentSection
-        postId={likes.postData.imageUrl}
-        comments={likes.postData.comments}
+        postId={postData.imageUrl}
+        comments={postData.comments}
       />
     </div>
   );

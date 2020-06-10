@@ -15,7 +15,7 @@ const [posts, setPosts] = useState(dummyData)
     <div className="posts-container-wrapper">
       {/* map through data here to return a Post and pass data as props to Post */}
       {posts.map(postObject => {
-        console.log(postObject)
+        // console.log(postObject)
         return (
           <Post key={postObject.username} postData={postObject}/>
         )
