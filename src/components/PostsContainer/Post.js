@@ -12,7 +12,7 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const { postData } = props
-  console.log("postData", postData)
+  console.log("props", props)
 
   const [likes, setlikes] = useState(props)
   return (
@@ -30,7 +30,7 @@ const Post = props => {
           src={postData.imageUrl}
         />
       </div>
-      <LikeSection />
+      <LikeSection likes={postData.likes}/>
       <CommentSection
         postId={postData.imageUrl}
         comments={postData.comments}

@@ -12,7 +12,6 @@ const CommentSection = props => {
     <div>
       {/* map through the comments data and return the Comment component */}
       {comments.map(commentObject => {
-      console.log("commentObject", commentObject)
         return (
           <Comment key={commentObject.username} comment={commentObject}/>
         )
